@@ -25,7 +25,7 @@
         android:id="@+id/screen_pinning_text_area"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="?android:attr/colorAccent"
+        android:background="@color/screen_pinning_background_color"
         android:gravity="center_vertical">
 
         <TextView
