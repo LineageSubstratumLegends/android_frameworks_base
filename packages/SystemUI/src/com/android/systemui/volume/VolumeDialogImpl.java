@@ -1000,6 +1000,8 @@ public class VolumeDialogImpl implements VolumeDialog, Dumpable,
             row.header.setFilters(new InputFilter[] {new InputFilter.LengthFilter(13)});
         }
         row.slider = row.view.findViewById(R.id.volume_row_slider);
+        row.slider.setProgressTintMode(PorterDuff.Mode.SRC_ATOP);
+        row.slider.setThumbTintMode(PorterDuff.Mode.SRC_ATOP);
         addSliderHapticsToRow(row);
         row.slider.setOnSeekBarChangeListener(new VolumeSeekBarChangeListener(row));
         row.number = row.view.findViewById(R.id.volume_number);
