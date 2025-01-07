@@ -75,6 +75,7 @@ import android.media.session.MediaController;
 import android.media.session.MediaSessionManager;
 import android.media.session.PlaybackState;
 import android.os.Debug;
+import android.graphics.PorterDuff;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
