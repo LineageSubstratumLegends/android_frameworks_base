@@ -25,10 +25,13 @@ import com.android.internal.messages.nano.SystemMessageProto.SystemMessage;
 public class SysuiRestartReceiver extends BroadcastReceiver {
 
     public static String ACTION = "com.android.systemui.action.RESTART";
-
+	public static String ACTION_THEME = "com.android.systemui.action.RESTART_THEME";
     @Override
     public void onReceive(Context context, Intent intent) {
-        if (ACTION.equals(intent.getAction())) {
+        boolean runAction = ACTION.equals(intent.getAction());
+        boolean runThemeAction = ACTION_THEME.equals(intent.getAction());
+
+        if (runAction) {
             String pkg = intent.getData().toString().substring(10);
             NotificationManager.from(context).cancel(pkg, SystemMessage.NOTE_PLUGIN);
             Process.killProcess(Process.myPid());
