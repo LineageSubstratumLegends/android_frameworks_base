@@ -1353,6 +1353,10 @@ public final class SystemServer implements Dumpable {
         mSystemServiceManager.startService(new OverlayManagerService(mSystemContext));
         t.traceEnd();
 
+        // Substratum system server implementation
+        traceBeginAndSlog("StartSubstratumService");More actions
+        mSystemServiceManager.startService(new SubstratumService(mSystemContext));
+        
         // Manages Resources packages
         t.traceBegin("StartResourcesManagerService");
         ResourcesManagerService resourcesService = new ResourcesManagerService(mSystemContext);
