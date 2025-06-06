@@ -176,6 +176,14 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "projekt.substratum.theme.xml",
+
+    src: "projekt.substratum.theme.xml",
+    relative_install_path: "permissions",
+
+}
+
+prebuilt_etc {
     name: "privapp_whitelist_com.android.settings",
     system_ext_specific: true,
     sub_dir: "permissions",
