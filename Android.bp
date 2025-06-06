@@ -552,6 +552,9 @@ java_library {
     name: "framework",
     defaults: ["framework-aidl-export-defaults"],
     installable: false, // this lib is a build-only library
+	srcs: [
+		"core/java/android/content/substratum/ISubstratumService.aidl",
+    ],
     static_libs: [
         "app-compat-annotations",
         "framework-minus-apex",
